@@ -209,6 +209,67 @@ nav.site-nav a.active {
   color: #444;
 }
 
+/* ---------- Values tabs ---------- */
+
+.values-section {
+  padding: 1rem 0 4rem;
+}
+
+.values-section .content-container {
+  max-width: 720px;
+}
+
+.values-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.values-tab {
+  background: none;
+  border: none;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #999;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.values-tab:hover {
+  color: #000;
+}
+
+.values-tab.active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.values-caption {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+}
+
+.values-panels {
+  margin-top: 2rem;
+}
+
+.values-panel {
+  display: none;
+}
+
+.values-panel.active {
+  display: block;
+}
+
 /* ---------- Q&A form ---------- */
 
 .qa-section {

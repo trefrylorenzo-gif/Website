@@ -30,10 +30,46 @@
   </nav>
 
   <main>
-    <section class="placeholder-section">
+    <section class="single-column">
       <div class="content-container text-center">
         <h2>Values</h2>
-        <p>Coming soon.</p>
+        <p>I put as much creativity and effort into my work as I can. My values are the primary sources of my creativity and they inspire me to do the best work.</p>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="content-container">
+        <div class="values-tabs" role="tablist">
+          <button class="values-tab active" data-tab="family" type="button">Family</button>
+          <button class="values-tab" data-tab="experiences" type="button">Experiences</button>
+          <button class="values-tab" data-tab="film" type="button">Film</button>
+          <button class="values-tab" data-tab="travel" type="button">Travel</button>
+          <button class="values-tab" data-tab="fashion" type="button">Fashion</button>
+          <button class="values-tab" data-tab="dreams" type="button">Dreams</button>
+        </div>
+
+        <p class="values-caption">These are my values and what drive me to set my work apart.</p>
+
+        <div class="values-panels">
+          <div class="values-panel active" id="panel-family">
+            <p>I want my family to be impressed by my work, and it's my mission to be someone who can positively benefit my family. I use the way my family acts to see emotions on a broader spectrum, which I implement in my writing and photography. Different people have different standards, but different standards form together to create a core, and capturing that leads to the best results.</p>
+          </div>
+          <div class="values-panel" id="panel-experiences">
+            <p>Growing up I was split between households and spent parts of my life on a low income while other parts of my life were high class. Those environments have completely different kinds of people and experiences from each other. I like to put elements from both lifestyles into my work, because that's how I was raised and that's who I've become.</p>
+          </div>
+          <div class="values-panel" id="panel-film">
+            <p>Since I was a young kid I've always been watching movies. Movies have the ability to leave a memorable impact and a unique visualization in just an hour or two. It's my dream to create movies, and I'm shaped by the stories I've seen in film.</p>
+          </div>
+          <div class="values-panel" id="panel-travel">
+            <p>Travel is an obvious inspiration in that seeing different ways of living, whether it be town to town or country to country, leads to countless ideas forming. Each place has many untold stories waiting to be discovered, and there's always so much to see in any place traveled to, even if it may not seem like it on the surface.</p>
+          </div>
+          <div class="values-panel" id="panel-fashion">
+            <p>Through photography I've found high interest in fashion. Outfits change based on moods and clothing is an easy way for someone to express themselves. Shades, fibers, laces, fabrics, accessories, and other components tell stories.</p>
+          </div>
+          <div class="values-panel" id="panel-dreams">
+            <p>The last and possibly most important of my values is a culmination of all the previous values. As I've said, my dream is to make films, and these films express my values. I want to show traits of my family members, stories relating to my past, homages to the films that shaped me the most, differing locations to tell stories previously untold, and characters who wear clothing that reflects their dynamics.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -44,6 +80,15 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.values-tab').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.values-tab').forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.values-panel').forEach(function (p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
