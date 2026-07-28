@@ -143,6 +143,72 @@ nav.site-nav a.active {
   color: #888;
 }
 
+/* ---------- Writing list ---------- */
+
+.writing-list {
+  padding: 2.5rem 0 4rem;
+}
+
+.writing-list .content-container {
+  max-width: 640px;
+}
+
+.writing-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.writing-item:first-child {
+  padding-top: 0;
+}
+
+.writing-item:first-child h3 {
+  margin-top: 0;
+}
+
+.writing-item:last-child {
+  border-bottom: none;
+}
+
+.writing-item p {
+  margin-top: 0.5em;
+  color: #444;
+}
+
+.writing-item .link-button {
+  margin-top: 1.25rem;
+}
+
+.writing-more {
+  margin-top: 0.75rem;
+}
+
+.writing-more summary {
+  cursor: pointer;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 15px;
+  color: #b8901f;
+  text-decoration: underline;
+  list-style: none;
+}
+
+.writing-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.writing-more summary:hover {
+  color: #8a6c17;
+}
+
+.writing-more[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.writing-more p {
+  margin-top: 0;
+  color: #444;
+}
+
 /* ---------- Q&A form ---------- */
 
 .qa-section {
