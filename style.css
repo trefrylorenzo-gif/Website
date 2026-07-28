@@ -29,7 +29,7 @@ img { max-width: 100%; display: block; }
 
 .title-section {
   position: relative;
-  min-height: 70vh;
+  min-height: 100vh;
   background-color: var(--dark);
   display: flex;
   align-items: center;
