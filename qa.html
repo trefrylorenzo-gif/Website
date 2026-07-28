@@ -31,26 +31,37 @@
 
   <main>
     <section class="qa-section">
-      <div class="content-container text-center">
-        <h2>Q&amp;A</h2>
-        <p>Got a question for me? Ask away below.</p>
+      <div class="content-container">
+        <div class="text-center">
+          <h2>Q&amp;A</h2>
+        </div>
 
-        <form id="qa-form" class="qa-form">
-          <input type="checkbox" name="botcheck" class="qa-honeypot" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="access_key" value="b2da7f80-59b0-4624-87fc-396a72e1cfd5">
-          <input type="hidden" name="subject" value="New question from the portfolio site">
-          <input type="hidden" name="from_name" value="Portfolio Q&A">
+        <div class="faq-list">
+        </div>
 
-          <label for="qa-name">Name <span class="qa-optional">(optional)</span></label>
-          <input type="text" id="qa-name" name="name" autocomplete="name">
+        <div class="qa-ask">
+          <h3>Ask a Question</h3>
+          <p>Got a question for me? Ask away below.</p>
 
-          <label for="qa-question">Your question</label>
-          <textarea id="qa-question" name="message" rows="5" required placeholder="Ask me anything..."></textarea>
+          <form id="qa-form" class="qa-form">
+            <input type="checkbox" name="botcheck" class="qa-honeypot" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="access_key" value="b2da7f80-59b0-4624-87fc-396a72e1cfd5">
+            <input type="hidden" name="subject" value="New question from the portfolio site">
+            <input type="hidden" name="from_name" value="Portfolio Q&A">
 
-          <button type="submit" class="link-button qa-submit">Send Question</button>
+            <label for="qa-name">Name <span class="qa-optional">(optional)</span></label>
+            <input type="text" id="qa-name" name="name" autocomplete="name">
 
-          <p id="qa-status" class="qa-status" role="status" aria-live="polite"></p>
-        </form>
+            <label for="qa-question">Your question</label>
+            <textarea id="qa-question" name="message" rows="5" required placeholder="Ask me anything..."></textarea>
+
+            <p class="qa-disclosure">Your question and my answer may be posted publicly on this page.</p>
+
+            <button type="submit" class="link-button qa-submit">Send Question</button>
+
+            <p id="qa-status" class="qa-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>

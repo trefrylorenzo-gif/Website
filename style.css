@@ -146,15 +146,57 @@ nav.site-nav a.active {
 /* ---------- Q&A form ---------- */
 
 .qa-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 4rem 0;
   min-height: 60vh;
+}
+
+.text-center h3 {
   text-align: center;
 }
 
-.qa-section > .content-container > p {
-  margin-top: 0.75em;
+/* ---------- Public FAQ list ---------- */
+
+.faq-list {
+  max-width: 640px;
+  margin: 2.5rem auto 0;
+}
+
+.faq-empty {
+  text-align: center;
+  color: #888;
+}
+
+.faq-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #eee;
+}
+
+.faq-question {
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.faq-answer {
+  margin-top: 0.5em;
+  color: #444;
+}
+
+/* ---------- Ask a question ---------- */
+
+.qa-ask {
+  max-width: 640px;
+  margin: 3.5rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid #eee;
+}
+
+.qa-ask p {
+  margin-top: 0.5em;
   color: #666;
 }
 
@@ -197,6 +239,12 @@ nav.site-nav a.active {
 .qa-form textarea:focus {
   outline: none;
   border-color: #000;
+}
+
+.qa-disclosure {
+  margin-top: 0.75rem;
+  font-size: 13px;
+  color: #888;
 }
 
 .qa-submit {
