@@ -367,6 +367,10 @@ p {
   margin-bottom: 12px;
 }
 
+.photo-group-small {
+  height: 190px;
+}
+
 .photo-tile {
   height: 100%;
 }
@@ -379,6 +383,30 @@ p {
 
 @media (max-width: 767px) {
   .photo-group { height: 200px; }
+  .photo-group-small { height: 120px; }
+}
+
+.photo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 110px;
+}
+
+.photo-row .photo-tile img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.content-container.wide {
+  max-width: 1100px;
+}
+
+@media (max-width: 767px) {
+  .photo-row { height: 75px; }
 }
 
 figcaption {
