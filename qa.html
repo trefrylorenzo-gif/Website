@@ -16,7 +16,7 @@
     <img class="title-bg" src="hero-bg.jpg" alt="">
     <div class="title-header">
       <h1 class="title">Lorenzo Trefry</h1>
-      <p class="subtitle">Hand Model for Hire</p>
+      <p class="subtitle">Creative for Hire</p>
     </div>
   </header>
 
@@ -30,10 +30,27 @@
   </nav>
 
   <main>
-    <section class="placeholder-section">
+    <section class="qa-section">
       <div class="content-container text-center">
         <h2>Q&amp;A</h2>
-        <p>Coming soon.</p>
+        <p>Got a question for me? Ask away below.</p>
+
+        <form id="qa-form" class="qa-form">
+          <input type="checkbox" name="botcheck" class="qa-honeypot" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="access_key" value="b2da7f80-59b0-4624-87fc-396a72e1cfd5">
+          <input type="hidden" name="subject" value="New question from the portfolio site">
+          <input type="hidden" name="from_name" value="Portfolio Q&A">
+
+          <label for="qa-name">Name <span class="qa-optional">(optional)</span></label>
+          <input type="text" id="qa-name" name="name" autocomplete="name">
+
+          <label for="qa-question">Your question</label>
+          <textarea id="qa-question" name="message" rows="5" required placeholder="Ask me anything..."></textarea>
+
+          <button type="submit" class="link-button qa-submit">Send Question</button>
+
+          <p id="qa-status" class="qa-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -44,6 +61,41 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const qaForm = document.getElementById('qa-form');
+    const qaStatus = document.getElementById('qa-status');
+
+    qaForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const submitBtn = qaForm.querySelector('.qa-submit');
+      submitBtn.disabled = true;
+      qaStatus.textContent = 'Sending...';
+      qaStatus.className = 'qa-status';
+
+      try {
+        const formData = new FormData(qaForm);
+        const payload = Object.fromEntries(formData.entries());
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          qaForm.reset();
+          qaStatus.textContent = 'Thanks! Your question has been sent.';
+          qaStatus.className = 'qa-status success';
+        } else {
+          throw new Error(result.message || 'Something went wrong.');
+        }
+      } catch (err) {
+        qaStatus.textContent = 'Something went wrong. Please try again in a moment.';
+        qaStatus.className = 'qa-status error';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
   </script>
 </body>
 </html>

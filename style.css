@@ -143,6 +143,90 @@ nav.site-nav a.active {
   color: #888;
 }
 
+/* ---------- Q&A form ---------- */
+
+.qa-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.qa-section > .content-container > p {
+  margin-top: 0.75em;
+  color: #666;
+}
+
+.qa-form {
+  margin: 2rem auto 0;
+  max-width: 480px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.qa-honeypot {
+  display: none;
+}
+
+.qa-form label {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 14px;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.qa-optional {
+  color: #999;
+}
+
+.qa-form input[type="text"],
+.qa-form textarea {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 16px;
+  color: var(--text-dark);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.qa-form input[type="text"]:focus,
+.qa-form textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.qa-submit {
+  align-self: center;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.qa-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.qa-status {
+  margin-top: 1rem;
+  min-height: 1.2em;
+  text-align: center;
+  font-size: 15px;
+}
+
+.qa-status.success {
+  color: #1a7a3c;
+}
+
+.qa-status.error {
+  color: #b3261e;
+}
+
 /* ---------- Shared content container ---------- */
 
 .content-container {
