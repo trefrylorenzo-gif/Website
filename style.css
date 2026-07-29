@@ -545,6 +545,88 @@ figcaption {
   color: var(--text-dark);
 }
 
+/* ---------- Home highlights ---------- */
+
+.home-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 6% 3rem;
+}
+
+.home-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 320px;
+  max-width: 400px;
+}
+
+.home-highlight-photo {
+  display: block;
+  text-decoration: none;
+  transition: opacity .15s ease;
+}
+
+.home-highlight-photo:hover {
+  opacity: 0.85;
+}
+
+.home-highlight img {
+  height: 260px;
+  width: auto;
+  max-width: 100%;
+}
+
+.home-highlight-title {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  line-height: 1.3;
+  text-align: center;
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .home-highlights { padding: 2.5rem 5% 1.5rem; gap: 2.5rem; }
+  .home-highlight img { height: 220px; }
+}
+
+.home-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 6% 3.5rem;
+}
+
+.home-card {
+  flex: 1 1 320px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.home-card h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.home-card p {
+  color: #444;
+}
+
+@media (max-width: 767px) {
+  .home-cards { padding: 1.5rem 5% 2.5rem; gap: 2.5rem; }
+}
+
 /* ---------- Split (image + text) sections ---------- */
 
 .split-section {
