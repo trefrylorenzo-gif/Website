@@ -743,6 +743,27 @@ a:not(.link-button):hover {
   color: var(--link-blue-hover);
 }
 
+/* ---------- Social links ---------- */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.social-links a {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
 /* ---------- Footer ---------- */
 
 footer {
