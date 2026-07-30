@@ -569,7 +569,7 @@ figcaption {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   max-width: 900px;
   margin: 0 auto;
   padding: 4rem 6% 3rem;
@@ -585,19 +585,24 @@ figcaption {
 }
 
 .home-highlight-photo {
+  position: relative;
   display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   text-decoration: none;
-  transition: opacity .15s ease;
 }
 
-.home-highlight-photo:hover {
-  opacity: 0.85;
+.home-highlight-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .15s ease;
 }
 
-.home-highlight img {
-  height: 260px;
-  width: auto;
-  max-width: 100%;
+.home-highlight-photo:hover img {
+  transform: scale(1.03);
 }
 
 .home-highlight-title {
@@ -607,22 +612,25 @@ figcaption {
   font-size: 28px;
   line-height: 1.3;
   text-align: center;
-  color: #000;
+  color: #b8901f;
+}
+
+.home-highlight .link-button {
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 767px) {
-  .home-highlights { padding: 2.5rem 5% 1.5rem; gap: 2.5rem; }
-  .home-highlight img { height: 220px; }
+  .home-highlights { padding: 2.5rem 5% 1.5rem; gap: 3.5rem; }
 }
 
 .home-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 6% 3.5rem;
+  padding: 2.5rem 6% 3.5rem;
 }
 
 .home-card {
@@ -634,14 +642,19 @@ figcaption {
 .home-card h3 {
   text-align: center;
   margin-top: 0;
+  color: #b8901f;
 }
 
 .home-card p {
   color: #444;
 }
 
+.home-card .link-button {
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 767px) {
-  .home-cards { padding: 1.5rem 5% 2.5rem; gap: 2.5rem; }
+  .home-cards { padding: 1.5rem 5% 2.5rem; gap: 3.5rem; }
 }
 
 /* ---------- Split (image + text) sections ---------- */
