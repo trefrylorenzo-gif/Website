@@ -427,12 +427,18 @@ nav.site-nav a.active {
 
 h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 58px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: normal;
   line-height: 1.2;
   color: #000;
   margin: 0 0 0.25em;
   text-align: left;
+}
+
+h2.page-title {
+  color: #b8901f;
+  font-weight: bold;
+  font-size: 58px;
 }
 
 h3 {
@@ -463,10 +469,12 @@ p {
   .photo-grid-section .content-container,
   .single-column.full-image .content-container,
   .writing-list .content-container,
-  .values-section .content-container {
-    max-width: 90%;
+  .values-section .content-container,
+  .content-container.wide {
+    max-width: calc(100% - 48px);
   }
-  h2 { font-size: 35px; }
+  h2 { font-size: 30px; }
+  h2.page-title { font-size: 35px; }
   h3 { font-size: 26px; }
   p { font-size: 17px; }
 }
