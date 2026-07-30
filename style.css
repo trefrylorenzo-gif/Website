@@ -511,6 +511,21 @@ p {
 @media (max-width: 767px) {
   .photo-group { height: 200px; }
   .photo-group-small { height: 120px; }
+
+  .photo-group-mobile-stack {
+    height: auto;
+    flex-direction: column;
+  }
+  .photo-group-mobile-stack .photo-tile {
+    height: auto;
+    width: 100%;
+  }
+  .photo-group-mobile-stack .photo-tile img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .photo-row {
@@ -703,10 +718,17 @@ figcaption {
   }
   .split-image { height: 320px; width: 100%; }
   .split-image.two-up {
-    height: 180px;
-    width: auto;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
     max-width: 100%;
     justify-content: center;
+  }
+  .split-image.two-up img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .split-section .content-container {
     max-width: 90%;
