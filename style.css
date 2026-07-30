@@ -609,7 +609,7 @@ figcaption {
   display: block;
   margin-top: 1rem;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
+  font-size: 35px;
   line-height: 1.3;
   text-align: center;
   color: #b8901f;
@@ -621,6 +621,7 @@ figcaption {
 
 @media (max-width: 767px) {
   .home-highlights { padding: 2.5rem 5% 1.5rem; gap: 3.5rem; }
+  .home-highlight-title { font-size: 26px; }
 }
 
 .home-cards {
@@ -792,12 +793,12 @@ a:not(.link-button):hover {
 .social-links a {
   font-family: 'Anonymous Pro', monospace;
   font-size: 14px;
-  color: #999;
+  color: #b8901f;
   text-decoration: none;
 }
 
 .social-links a:hover {
-  color: #666;
+  color: #8a6c17;
   text-decoration: underline;
 }
 
