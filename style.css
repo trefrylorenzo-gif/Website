@@ -461,7 +461,9 @@ p {
   .content-container,
   .single-column .content-container,
   .photo-grid-section .content-container,
-  .single-column.full-image .content-container {
+  .single-column.full-image .content-container,
+  .writing-list .content-container,
+  .values-section .content-container {
     max-width: 90%;
   }
   h2 { font-size: 35px; }
