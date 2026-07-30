@@ -510,6 +510,22 @@ p {
   max-width: 100%;
 }
 
+.photo-grid-section--stack .photo-group {
+  height: auto;
+  flex-direction: column;
+}
+
+.photo-grid-section--stack .photo-tile {
+  height: auto;
+  width: 100%;
+  max-width: 480px;
+}
+
+.photo-grid-section--stack .photo-tile img {
+  height: auto;
+  width: 100%;
+}
+
 @media (max-width: 767px) {
   .photo-group { height: 200px; }
   .photo-group-small { height: 120px; }
