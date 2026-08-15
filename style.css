@@ -886,6 +886,10 @@ a:not(.link-button):hover {
   text-decoration: underline;
 }
 
+.scroll-spacer {
+  height: 15vh;
+}
+
 /* ---------- Footer ---------- */
 
 footer {

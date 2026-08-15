@@ -30,6 +30,12 @@
     <a href="qa.html">Q&amp;A</a>
   </nav>
 
+  <script>
+    window.addEventListener('load', () => {
+      window.scrollTo(0, document.querySelector('.site-nav').offsetTop);
+    });
+  </script>
+
   <main>
     <section class="single-column">
       <div class="content-container text-center">
@@ -66,6 +72,8 @@
         </div>
       </div>
     </section>
+
+    <div class="scroll-spacer" aria-hidden="true"></div>
   </main>
 
   <footer>
