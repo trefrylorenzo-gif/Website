@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 </head>
 <body>
 
@@ -31,10 +33,26 @@
   </nav>
 
   <script>
-    window.addEventListener('load', () => {
-      window.scrollTo(0, document.querySelector('.site-nav').offsetTop);
-    });
+    (function () {
+      function scrollAndReveal() {
+        window.scrollTo(0, document.querySelector('.site-nav').offsetTop);
+        document.body.style.visibility = 'visible';
+      }
+      var settled = Promise.all([
+        new Promise(function (resolve) { window.addEventListener('load', resolve); }),
+        document.fonts ? document.fonts.ready : Promise.resolve(),
+      ]);
+      var done = false;
+      function once() {
+        if (done) return;
+        done = true;
+        scrollAndReveal();
+      }
+      settled.then(once);
+      setTimeout(once, 1500);
+    })();
   </script>
+
 
   <main>
     <section class="single-column">
